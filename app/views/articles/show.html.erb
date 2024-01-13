@@ -1,0 +1,11 @@
+<h2><%= @article.title %></h2>
+<div class="border">
+  <h4><%=@article.content %></h4>
+</div>
+
+<%= link_to "Edit article", edit_article_path, class: "btn btn-primary"%>
+<%= link_to "Articles list", articles_path, class: "btn btn-primary"%>
+<%= link_to "Delete article",
+  article_path(@article),
+  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "btn btn-danger"
+%>
